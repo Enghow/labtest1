@@ -33,9 +33,7 @@
       $tsql= "SELECT * FROM [dbo].[restaurant]";
       $getResults= sqlsrv_query($conn, $tsql);
       if ($getResults == FALSE)
-      {
         die(sqlsrv_errors());
-      }
       while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC))
       {
         echo "<tr>";
